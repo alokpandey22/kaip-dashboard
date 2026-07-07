@@ -1,0 +1,147 @@
+/* Premium Dark Theme CSS for KAIP */
+
+:root {
+    --bg-color: #0e1117;
+    --sidebar-bg: #1a1f2e;
+    --card-bg: #262c3a;
+    --accent-blue: #4fc3f7;
+    --accent-green: #66bb6a;
+    --accent-amber: #ffb74d;
+    --accent-coral: #ef5350;
+    --text-primary: #ffffff;
+    --text-secondary: #b0bec5;
+    --border-color: rgba(255, 255, 255, 0.1);
+}
+
+.stApp {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Sidebar styling */
+section[data-testid="stSidebar"] {
+    background-color: var(--sidebar-bg);
+    border-right: 1px solid var(--border-color);
+}
+
+/* Titles and Headers */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+h1 {
+    background: linear-gradient(90deg, var(--accent-blue) 0%, #ab47bc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px;
+}
+
+/* Metric Cards */
+[data-testid="stMetricValue"] {
+    color: var(--accent-blue);
+    font-size: 32px;
+    font-weight: 700;
+}
+
+[data-testid="stMetricDelta"] {
+    font-size: 14px;
+}
+
+/* Custom Glassmorphism */
+div.css-1r6slb0, div.css-12oz5g7 {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    backdrop-filter: blur(10px);
+}
+
+/* Buttons */
+.stButton > button {
+    background: linear-gradient(135deg, #1e88e5 0%, #1565c0 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 24px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.stButton > button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(30, 136, 229, 0.4);
+    color: white;
+}
+
+/* Input elements */
+.stSelectbox > div > div, .stTextInput > div > div {
+    background-color: var(--sidebar-bg);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    border-radius: 8px;
+}
+
+/* Tabs */
+.stTabs [data-baseweb="tab-list"] {
+    background-color: transparent;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.stTabs [data-baseweb="tab"] {
+    color: var(--text-secondary);
+}
+
+.stTabs [aria-selected="true"] {
+    color: var(--accent-blue);
+    border-bottom-color: var(--accent-blue);
+}
+
+/* DataFrames */
+.stDataFrame {
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+}
+
+.stDataFrame [data-testid="StyledFullScreenButton"] {
+    display: none;
+}
+
+/* Custom classes */
+.kaip-hero {
+    text-align: center;
+    padding: 40px 0;
+    background: linear-gradient(180deg, rgba(79, 195, 247, 0.1) 0%, rgba(14, 17, 23, 0) 100%);
+    border-radius: 16px;
+    margin-bottom: 30px;
+}
+
+.kaip-feature-card {
+    background: var(--card-bg);
+    padding: 24px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.kaip-feature-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-blue);
+}
+
+.kaip-feature-icon {
+    font-size: 48px;
+    margin-bottom: 16px;
+}
+
+.kaip-getting-started {
+    background: var(--sidebar-bg);
+    padding: 24px;
+    border-radius: 12px;
+    border-left: 4px solid var(--accent-amber);
+    margin-top: 30px;
+}
