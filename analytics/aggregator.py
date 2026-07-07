@@ -108,7 +108,7 @@ def get_overview_metrics(df: pd.DataFrame) -> Dict[str, Any]:
         fa_vals = feature_reqs["feature_area"].dropna()
         fa_vals = fa_vals[fa_vals.astype(str).str.strip() != ""]
         if not fa_vals.empty:
-            top_feature_request = fa_vals.value_counts().index[0]
+            top_feature_request = fa_vals.value_counts().index[0].replace("_", " ").title()
 
     # Rating trend (last 30 days vs previous 30 days) ----------------------
     trend: float = 0.0
