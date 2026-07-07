@@ -4,7 +4,11 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # API Keys
-GROQ_API_KEY = os.getenv('GROQ_API_KEY', '')
+import streamlit as st
+try:
+    GROQ_API_KEY = st.secrets["GROQ_API_KEY"]
+except (FileNotFoundError, KeyError):
+    GROQ_API_KEY = os.getenv('GROQ_API_KEY', '')
 
 # App IDs to scrape
 PLAYSTORE_APPS = {
