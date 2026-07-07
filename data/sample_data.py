@@ -106,7 +106,7 @@ def generate_all_samples():
                 'feature_area': feature_area,
                 'severity': severity,
                 'intent': intent,
-                'pain_point': review['review_text'][:50] + '...' if sentiment != 'positive' else None,
+                'pain_point': review['review_text'][:150] + '...' if sentiment != 'positive' else None,
                 'competitor_mention': competitor_mention,
                 'one_line_summary': f"User thinks: {review['review_text'][:40]}..."
             }
